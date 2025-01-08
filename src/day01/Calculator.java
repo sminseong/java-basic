@@ -1,3 +1,5 @@
+package day01;
+
 import java.util.Scanner;
 
 public class Calculator {
@@ -19,6 +21,6 @@ public class Calculator {
                 }
             }
         //4. 결과 출력
-        System.out.println("1 - 100까지 더한값 " + sum);
+        System.out.println("1 - 100까지 더한값: " + sum);
     }
 }
