@@ -5,20 +5,26 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        //System.out.printf("Number? ");
-        int a = sc.nextInt();
-        //int b = sc.nextInt();
-        //int c = sc.nextInt();
-        switch (a) {
-            case 1,3,5,7,8,10,12:
-                System.out.printf("31");
-                break;
-            case 4,6,9,11:
-                System.out.printf("30");
-                break;
-            default:
-                System.out.printf("28");
-                break;
+        int n = sc.nextInt();
+
+        for (int i=1; i<=n; i++) {
+            for (int j=1; j<i; j++) {
+                System.out.print(" ");
+            }
+            for (int j=1; j<=(n*2)-(i*2)+1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i=1; i<=n; i++) {
+            for (int j=1; j<n-i; j++) {
+                System.out.print(" ");
+            }
+            for (int j=1; j<n; j++) {// 덜함
+                System.out.print("*");
+            }
+            System.out.println();
         }
     }
 }
+
