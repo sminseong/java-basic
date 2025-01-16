@@ -5,18 +5,24 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] arr = new int[10];
-        int sum = 0;
-        int sum_odd = 0;
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        int temp = 0;
 
         for (int i=0; i<arr.length; i++) {
             arr[i] = sc.nextInt();
-            if (i%1==1) {   //덜함
-                sum += arr[i];
-            } else {
-                sum_odd += arr[i];
+        }
+        for (int i=0; i<arr.length; i++) {
+            for (int j=0; j<arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
             }
         }
-        System.out.printf("sum : %d%navg : %.1f", sum, (double)sum_odd/arr.length);
+        for (int i : arr) {
+            System.out.println(i);
+        }
     }
 }
