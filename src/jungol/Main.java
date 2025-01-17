@@ -5,18 +5,20 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] arr = new int[100];
-        int[] score = new int[101];
+        int[] arr = new int [100];
+        int[] cnt = new int [101];
+        int N = sc.nextInt();
 
-        for (int i=0; i<arr.length; i++) {
-            arr[i] = sc.nextInt();
-            if (arr[i]==0) { break; }
-            score[arr[i]-arr[i]%10]++;
+        for (int i=1; i<2*N; i++) {
+            int a = sc.nextInt();
+            cnt[a]++;
         }
-        for (int i=score.length-1; i>=0; i--) {
-            if (score[i]!=0) {
-                System.out.printf("%d : %d person%n", i, score[i]);
+        for (int i=1; i<N+1; i++) {
+            if (cnt[i]!=0) {
+                System.out.print(cnt[i]);
             }
         }
+
+
     }
 }
