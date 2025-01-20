@@ -15,7 +15,7 @@ public class Main {
         }
         for (int i=1; i<N+1; i++) {
             if (cnt[i]!=0) {
-                System.out.print(cnt[i]);
+                System.out.print(cnt[i]);//덜함
             }
         }
 
