@@ -8,10 +8,12 @@ class Singleton {
     public static Singleton getInstance() {
         return singleton;
     }
+
 }
 
 public class SingletonEx {
     public static void main(String[] args) {
+
 
         //정적메소드 getInstance()에서 싱글톤 객체 얻음
         Singleton obj1 = Singleton.getInstance();
