@@ -1,4 +1,4 @@
-
+package day13.homework.inheritance실습.level02;
 
 public abstract class Account {
 	private String accId;
@@ -7,10 +7,10 @@ public abstract class Account {
 	public Account(){
 		
 	}
-	public Account(String accId,long balance,String ownerName){
+	public Account(String accId, String owenerName, long balance){
 		this.accId = accId;
-		this.balance = balance;
 		this.ownerName = ownerName;
+		this.balance = balance;
 	}
 	public abstract void calcRate();
 	public void deposit(long money){
