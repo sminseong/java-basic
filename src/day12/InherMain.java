@@ -27,6 +27,7 @@ public class InherMain {
         Child child = new Child();
         System.out.println(parent.field1);
         parent.method1();
+        //parent.method2();   //불가능
 
         System.out.println(child.field1 + " " + child.field2);
         child.method1();
